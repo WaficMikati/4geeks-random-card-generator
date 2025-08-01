@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="./assets/img/4geeks.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Random Card Generator</title>
+
+        <!-- Fontawesome is our recomended library for icons -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div
+            class="container-fluid h-100 bg-success d-flex flex-column justify-content-between align-items-center p-3 gap-3"
+        >
+            <span class="display-4 fw-bold">Random Card Generator</span>
+            <div
+                class="d-flex flex-column justify-content-between bg-white rounded-3 display-1 pe-2 ps-2"
+                id="card-display"
+            >
+                <span class="align-self-start suit text-black">♣</span>
+                <span
+                    class="align-self-center fw-bold text-black"
+                    id="card-value"
+                >
+                    10
+                </span>
+                <span class="align-self-end suit text-black">♣</span>
+            </div>
+            <div
+                id="controls"
+                class="container-fluid d-flex gap-1 justify-content-center"
+            >
+                <div
+                    id="width-control"
+                    class="d-flex gap-3 align-items-center bg-dark p-3 rounded-3"
+                >
+                    <label for="width-slider" class="border-0 fs-5">
+                        Width
+                    </label>
+                    <output id="width-value" style="width: 5rem"></output>
+                    <input
+                        type="range"
+                        id="width-slider"
+                        class="form-range"
+                        min="7"
+                        max="100"
+                        value="21"
+                    />
+                </div>
+                <button class="btn btn-lg btn-dark">New Card</button>
+                <div
+                    id="height-control"
+                    class="d-flex gap-3 align-items-center bg-dark p-3 rounded-3"
+                >
+                    <label for="height-slider" class="border-0 fs-5">
+                        Height
+                    </label>
+                    <output id="height-value" style="width: 5rem"></output>
+                    <input
+                        type="range"
+                        id="height-slider"
+                        class="form-range"
+                        min="33"
+                        max="80"
+                        value="62"
+                    />
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script type="module" src="/app.js"></script>
+    </body>
+</html>
